@@ -84,7 +84,11 @@
   <body class="text-center">
     
 <main class="form-signin w-100 m-auto">
-  <h2 class=" mb-3 fw-normal">Bonjour ${usernom }</h2>
+<div class="d-flex">
+
+<a href="Decconexion" class="btn btn-danger h-25">Deconnexion</a>
+  <h3 class=" mb-3 fw-normal ms-2">Bonjour ${usernom }</h3> 
+  </div>
     <h4 class=" mb-3 fw-normal">Bienvenue dans Todo App </h4>
     
   <form method="post">
@@ -112,7 +116,7 @@
     
       <label class="d-flex justify-content-center">
            
-        <h6><%= t.getTitre() %></h6> <a href="Index?check=<%=t.getId_todo() %>" ><i title="done" class="ms-3">&#10003;</i></a>
+        <a href="Detail?idtodo=<%=t.getId_todo()%>" style="text-decoration: none; color: black;"><h6><%= t.getTitre() %></h6></a> <a href="Index?check=<%=t.getId_todo()%>"><i  title="done" class="ms-3">&#10003;</i></a>
       </label>
     </div>
     

@@ -153,7 +153,7 @@
     </div>
     <div class="form-floating my-3">
       <input name="mdp" type="password" class="form-control"  placeholder="name@example.com">
-      <label for="floatingInput">Mot de passe</label>
+      <label for="floatingInput">Mot de passe (minimum 8 caractères, 1 maj, 1 chiffre, 1 car. spécial)</label>
     </div>
     <div class="form-floating my-3">
       <input name="cmdp" type="password" class="form-control" id="floatingPassword" placeholder="Password">

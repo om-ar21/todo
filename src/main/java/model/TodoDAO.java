@@ -95,4 +95,28 @@ public void check(int id) {
     	 System.out.println("check NO");
     }
 }
+public Todo getById(int id) {
+	try {
+
+		PreparedStatement preparedStatement  = Database.connexion.prepareStatement("SELECT * FROM todo WHERE id_todo=? ");
+		preparedStatement.setInt(1,id);
+
+		ResultSet resultat=preparedStatement.executeQuery();
+
+		resultat.next();
+		Todo u = new Todo();
+
+		u.setId_todo(resultat.getInt( "id_todo" ));
+		u.setId_user(resultat.getInt( "id_user" ));
+		u.setTitre(resultat.getString("titre"));
+		u.setDescription(resultat.getString("description"));
+		
+
+		return u;
+
+	} catch (Exception ex) {
+		ex.printStackTrace();
+		return null;
+	}
+}
 }
