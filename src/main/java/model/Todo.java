@@ -51,6 +51,13 @@ public class Todo {
 		this.description = description;
 		this.done = done;
 	}
+	
+	public Todo(int id_user, String titre, String description) {
+		super();
+		this.id_user = id_user;
+		this.titre = titre;
+		this.description = description;
+	}
 	public Todo() {
 		super();
 	}
